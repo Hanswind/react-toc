@@ -2,7 +2,7 @@
   "name": "react-toc-hash-link",
   "version": "1.0.0",
   "description": "Create a table of contents for react hash link from the given markdown text.",
-  "author": "Chayan",
+  "author": "Hanswind",
   "license": "MIT",
   "repository": "Hanswind/react-toc",
   "main": "dist/index.js",
