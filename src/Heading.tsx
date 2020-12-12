@@ -1,23 +1,22 @@
 import * as React from "react";
 import { createLink, createTitle } from "./utils";
+import {HashLink as Link} from "react-router-hash-link";
 
 export default class Heading {
   title: string;
   level: number;
   titleLimit: number;
-  customUrl: string;
 
-  constructor(title: string, level: number, titleLimit: number, customUrl: string) {
+  constructor(title: string, level: number, titleLimit: number) {
     this.title = title;
     this.level = level;
     this.titleLimit = titleLimit;
-    this.customUrl = customUrl;
   }
 
-  generateList() {
+  generateList(customUrl: string) {
     const listItem = (
       <li>
-        <Link to={`${this.customUrl}#${createLink(this.title)}`}>
+        <Link to={`${customUrl}#${createLink(this.title)}`}>
           {createTitle(this.title, this.titleLimit)}
         </Link>
       </li>

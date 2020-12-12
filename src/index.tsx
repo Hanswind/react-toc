@@ -61,12 +61,12 @@ const Toc = ({
     headingLevel
   );
   const headingObjects = matchedHeadings?.map(heading =>
-    newHeading(heading, limit, customUrl)
+    newHeading(heading, limit)
   );
   const headingTags:
     | JSX.Element[]
     | undefined = headingObjects?.map((heading: Heading) =>
-    heading.generateList()
+    heading.generateList(customUrl)
   );
 
   if (!headingTags) return null;
