@@ -1,10 +1,10 @@
 {
   "name": "react-toc-hash-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a table of contents for react hash link from the given markdown text.",
   "author": "Hanswind",
   "license": "MIT",
-  "repository": "Hanswind/react-toc",
+  "repository": "Hanswind/react-toc-hash-link",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
