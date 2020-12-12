@@ -5,17 +5,19 @@ export default class Heading {
   title: string;
   level: number;
   titleLimit: number;
+  customUrl: string;
 
-  constructor(title: string, level: number, titleLimit: number) {
+  constructor(title: string, level: number, titleLimit: number, customUrl: string) {
     this.title = title;
     this.level = level;
     this.titleLimit = titleLimit;
+    this.customUrl = customUrl;
   }
 
   generateList() {
     const listItem = (
       <li>
-        <Link to={`#${createLink(this.title)}`}>
+        <Link to={`${this.customUrl}#${createLink(this.title)}`}>
           {createTitle(this.title, this.titleLimit)}
         </Link>
       </li>
