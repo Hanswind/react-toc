@@ -41,13 +41,15 @@ const Toc = ({
   titleLimit,
   lowestHeadingLevel,
   className,
-  type
+  type,
+  url,
 }: Props) => {
   // Set default values
   const limit = titleLimit ? titleLimit : 200;
   const defaultClass = type === "raw" ? "" : "react-toc";
   const customClass = className || defaultClass;
   const headingLevel: number = lowestHeadingLevel || 6;
+  const customUrl = url || "";
 
   // Style settings
   const style: string | undefined = styles[customClass] || className;
@@ -58,7 +60,7 @@ const Toc = ({
     headingLevel
   );
   const headingObjects = matchedHeadings?.map(heading =>
-    newHeading(heading, limit)
+    newHeading(heading, limit, customUrl)
   );
   const headingTags:
     | JSX.Element[]
