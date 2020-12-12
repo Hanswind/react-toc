@@ -34,6 +34,7 @@ interface Props {
     The type of a TOC you want to use.
   */
   type?: "default" | "raw"; // "fixed-left" | "fixed-right" | "material" | "bootstrap"
+  url?: string;
 }
 
 const Toc = ({
