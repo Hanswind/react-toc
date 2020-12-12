@@ -15,9 +15,9 @@ export default class Heading {
   generateList() {
     const listItem = (
       <li>
-        <a href={`#${createLink(this.title)}`}>
+        <Link to={`#${createLink(this.title)}`}>
           {createTitle(this.title, this.titleLimit)}
-        </a>
+        </Link>
       </li>
     );
 
