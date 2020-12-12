@@ -42,3 +42,15 @@ const markdownText = '### 3. This is Example';
 :**`blank` will be replace to '-' on `href Anchor url`** (url in url parament has no difference)
 
 : result `a tag` is adjusted as `HashLink` in `react-router-hash-link`
+
+
+
+## CAUTIONS
+
+1. **`?`** string is convert to blank, `uppercase`  convert to `lowercase`
+
+   ```js
+   markdownText = "### 3. What is Spa?"
+   
+   result : ...<a href="#/post#3.-what-is-spa-">3. What is Spa?</a>...
+   ```
